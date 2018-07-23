@@ -1,3 +1,13 @@
 alias reload!='. ~/.zshrc'
 
-alias cls='clear' # Good 'ol Clear Screen command
+# Navigation
+alias cls="clear"
+alias ..="cd .."
+alias home="cd"
+alias desenv="cd ~/Documents/desenv"
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Shortcuts
+alias zshrc="atom ~/.zshrc"
