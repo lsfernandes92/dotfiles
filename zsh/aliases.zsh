@@ -10,4 +10,5 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Shortcuts
-alias zshrc="atom ~/.zshrc"
+alias zshrc="vim ~/.zshrc"
+alias vimrc="vim ~/.vimrc"

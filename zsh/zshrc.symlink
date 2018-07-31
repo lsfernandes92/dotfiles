@@ -124,8 +124,10 @@ plugins=(
 
 source $OH_MY_ZSH/oh-my-zsh.sh
 
-# User configuration
+# Coloured TERM for lightline.vim
+export TERM=xterm-256color
 
+# User configuration
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
