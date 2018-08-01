@@ -1,0 +1,11 @@
+file-icons@2.1.21
+git-blame@1.6.0
+git-plus@7.10.2
+goto-definition@1.3.4
+goto-last-edit@0.3.3
+language-docker@1.1.8
+minimap@4.29.8
+multi-cursor@2.1.5
+tool-bar@1.1.7
+wakatime@7.0.4
+
