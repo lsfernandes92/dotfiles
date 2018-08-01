@@ -15,7 +15,6 @@ then
   then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
-
 fi
 
 exit 0
