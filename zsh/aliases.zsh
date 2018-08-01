@@ -1,4 +1,5 @@
-alias reload!='. ~/.zshrc'
+# Reload ZSH
+alias reload!='source ~/.zshrc'
 
 # Navigation
 alias cls="clear"
@@ -10,5 +11,5 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Shortcuts
-alias zshrc="vim ~/.zshrc"
-alias vimrc="vim ~/.vimrc"
+alias zshrc="atom ~/.zshrc"
+alias vimrc="atom ~/.vimrc"
