@@ -3,7 +3,7 @@ cask_args appdir: '/Applications'
 tap 'homebrew/bundle'
 tap 'puma/puma'
 
-brew 'zsh zsh-completions'
+brew 'zsh'
 brew 'ack'
 brew 'git'
 brew 'automake'
