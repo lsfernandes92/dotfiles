@@ -1,5 +1,6 @@
 #!/bin/bash
 if [ "$(uname -s)" == "Linux" ]
+then
   echo "Installing system packages for you..."
   echo "Create SSH keys before install system packages? (y/n): "
   read create_ssh
@@ -10,26 +11,34 @@ if [ "$(uname -s)" == "Linux" ]
   sudo apt-get -y update
 
   # dunno packages
-  sudo apt-get -qq install -y ack automake libgpg-error libcaca libgit2 node ruby-build youtube-dl libksba libunistring libyaml icu4c libidn2
+  sudo apt-get -qq install -y ack automake ruby-build youtube-dl
 
   # basic packages
-  sudo apt-get -qq install -y build-essential git zsh zsh-syntax-highlighting vim curl wget openssl gdb coreutils pkg-config make openssh
+  sudo apt-get -qq install -y build-essential git zsh zsh-syntax-highlighting vim curl wget openssl gdb coreutils pkg-config make openssh-server
 
   # some dev libraries
-  sudo apt-get -qq install -y libxml2-dev libxslt1-dev dpkg-dev autoconf libreadline-dev libdnet-dev libffi-dev libpcap-dev libtool libmagic-dev libfreetype6-dev puma-dev rbenv
+  sudo apt-get -qq install -y libcurl4-gnutls-dev libgeoip-dev libopenssl-ruby libxml2 libxml2-dev ruby-dev libxslt1-dev dpkg-dev autoconf libreadline-dev libdnet-dev libffi-dev libpcap-dev libtool libmagic-dev libfreetype6-dev puma-dev rbenv
 
   # databases
-  sudo apt-get -qq install -y postgresl
+  sudo apt -qq install -y postgresql postgresql-contrib
 
   # useful tools
   sudo apt-get -qq install -y zip unzip upx unrar-free jq dnsutils tcpdump httpie
 
   # security and privacy
-  sudo apt-get -qq install -y tor torsocks tor-arm socat dnscrypt-proxy secure-delete dnssec-tools logcheck logcheck-database
+  sudo apt-get -qq install -y tor torsocks tor-arm socat dnscrypt-proxy secure-delete logcheck logcheck-database
 
   # Most used Apps
   echo "Installing system apps..."
-  sudo apt-get -qq install -y 1password atom firefox google-chrome slack steam spotify virtualbox iterm2 docker
+  # Repo atom dependency
+  wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
+  sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+  # Repo chrome dependecy
+  wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+  sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+
+  sudo apt-get -y update
+  sudo apt-get -qq install -y atom google-chrome-stable docker #slack steam spotify virtualbox
 
   if [[ $create_ssh == "y" || $create_ssh == "Y" || $create_ssh == "yes" ]]; then
       echo "**SSH Key Generation**"
@@ -42,5 +51,4 @@ if [ "$(uname -s)" == "Linux" ]
       sudo rngd -r /dev/urandom
       gpg --gen-key
   fi
-
-then
+fi
