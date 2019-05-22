@@ -8,24 +8,33 @@ then
   read create_pgp
 
   # perform initial repo update
+  echo "Updating repo..."
   sudo apt-get -y update
 
   # dunno packages
   sudo apt-get -qq install -y ack automake ruby-build youtube-dl
 
   # basic packages
+  echo "Installing basic packages..."
   sudo apt-get -qq install -y build-essential git zsh zsh-syntax-highlighting vim curl wget openssl gdb coreutils pkg-config make openssh-server
 
+  # ZSH framework management (oh-my-zsh)
+  sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+  
   # some dev libraries
+  echo "Installing dev libraries..."
   sudo apt-get -qq install -y libcurl4-gnutls-dev libgeoip-dev libopenssl-ruby libxml2 libxml2-dev ruby-dev libxslt1-dev dpkg-dev autoconf libreadline-dev libdnet-dev libffi-dev libpcap-dev libtool libmagic-dev libfreetype6-dev puma-dev rbenv
 
   # databases
+  echo "Installing postgresql..."
   sudo apt -qq install -y postgresql postgresql-contrib
 
   # useful tools
+  echo "Installing useful tools..."
   sudo apt-get -qq install -y zip unzip upx unrar-free jq dnsutils tcpdump httpie
 
   # security and privacy
+  echo "Installing security and privacy stuffs..."
   sudo apt-get -qq install -y tor torsocks tor-arm socat dnscrypt-proxy secure-delete logcheck logcheck-database
 
   # Most used Apps
