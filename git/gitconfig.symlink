@@ -13,7 +13,7 @@
         diff = auto
         status = auto
         branch = auto
-        ui = true
+	ui = auto
 [core]
         excludesfile = ~/.gitignore
         editor = vim
