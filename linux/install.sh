@@ -20,7 +20,7 @@ then
 
   # ZSH framework management (oh-my-zsh)
   sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-  
+
   # some dev libraries
   echo "Installing dev libraries..."
   sudo apt-get -qq install -y libcurl4-gnutls-dev libgeoip-dev libopenssl-ruby libxml2 libxml2-dev ruby-dev libxslt1-dev dpkg-dev autoconf libreadline-dev libdnet-dev libffi-dev libpcap-dev libtool libmagic-dev libfreetype6-dev puma-dev rbenv
@@ -47,7 +47,7 @@ then
   sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
   sudo apt-get -y update
-  sudo apt-get -qq install -y atom google-chrome-stable docker #slack steam spotify virtualbox
+  sudo apt install -y atom google-chrome-stable docker firefox microsoft-edge-beta slack steam spotify
 
   if [[ $create_ssh == "y" || $create_ssh == "Y" || $create_ssh == "yes" ]]; then
       echo "**SSH Key Generation**"

@@ -32,7 +32,6 @@ brew 'icu4c'
 brew 'libidn2'
 brew 'libtool'
 
-cask '1password'
 cask 'atom'
 cask 'firefox'
 cask 'google-chrome'
