@@ -62,7 +62,7 @@ The install script will grap all the `topic/install.sh` files in this repo and p
 
 Note: if any `.sh` file fails to run append the correct access permissions to the file by giving it's execute permission. You can do that by typing the command in your shell: `$chmod -x <SH_SCRIPT_FILE>`
 
-After that is run the following:
+After that, run the following:
 
 ```sh
 script/bootstrap
