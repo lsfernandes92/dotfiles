@@ -55,8 +55,16 @@ Run this:
 ```sh
 git clone https://github.com/lsfernandes92/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-script/bootstrap
+script/install
 ```
+
+The install script will grap all the `topic/install.sh` files in this repo and perform system updates. For linux for example it will update the `apt-get` repo and install basic packages, some developer libraries, databases, security and privacy packages, most used apps and useful tools.
+
+Note: if any `.sh` file fails to run append the correct access permissions to the file by giving it's execute permission. You can do that by typing the command in your shell: `$chmod -x <SH_SCRIPT_FILE>`
+
+After that is run the following:
+
+`script/bootstrap`
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
