@@ -62,6 +62,8 @@ The install script will grap all the `topic/install.sh` files in this repo and p
 
 Note: if any `.sh` file fails to run append the correct access permissions to the file by giving it's execute permission. You can do that by typing the command in your shell: `$chmod -x <SH_SCRIPT_FILE>`
 
+Note2: The install script include the installation of `zsh`, but to that take effect and to make the `zsh` your default shell take a look at [this](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+
 After that, run the following:
 
 ```sh
