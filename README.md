@@ -64,7 +64,9 @@ Note: if any `.sh` file fails to run append the correct access permissions to th
 
 After that is run the following:
 
-`script/bootstrap`
+```sh
+script/bootstrap
+```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
