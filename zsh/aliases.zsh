@@ -11,5 +11,5 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Shortcuts
-alias zshrc="atom ~/.zshrc"
-alias vimrc="atom ~/.vimrc"
+alias zshrc="atom ~/.dotfiles/zsh/zshrc.symlink"
+alias vimrc="atom ~/.dotfiles/vim/vimrc.symlink"
