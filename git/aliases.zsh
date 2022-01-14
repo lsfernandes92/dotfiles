@@ -2,7 +2,6 @@
 # Aliases
 # (sorted alphabetically)
 #
-
 alias g='git'
 
 alias ga='git add'
