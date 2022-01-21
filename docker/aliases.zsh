@@ -1,13 +1,20 @@
 alias d='docker $*'
 alias dc='docker-compose $*'
-alias dcr='docker-compose run web $*'
-alias dcb='docker-compose run web bash'
-alias dcu="docker-compose up -d"
-alias dcd="docker-compose down"
+alias dcu="dc up -d"
+alias dcd="dc down"
 alias dsa='docker stop $(docker ps -a -q)'
-alias step1='docker-compose run --no-deps web rails new . --force --database=postgresql'
+alias dcr='dc run web $*'
+alias dcb='dcr bash'
+alias dcra='dcr bin/rails $*'
+alias dcrr='dcr bin/rspec $*'
+
+# This repo: https://github.com/lsfernandes92/dockerizando_rails.git
+# Contains the files needed to create a Ruby on Rails with Postgresql container.
+# The following aliases meant to executed when I build a new rails
+# project using the above repo
+alias step1='dc run --no-deps web rails new . --force --database=postgresql'
 alias step2='sudo chown -R $USER:$USER .'
-alias step3='docker-compose build'
+alias step3='dc build'
 alias step4='rm -f config/database.yml && mv database.yml config/'
-alias step5='docker-compose up'
-alias step6='docker-compose run web rake db:create'
+alias step5='dc up'
+alias step6='dcr rake db:create'
