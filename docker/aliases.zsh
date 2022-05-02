@@ -7,6 +7,7 @@ alias dcr='dc run web $*'
 alias dcb='dcr bash'
 alias dcra='dcr bin/rails $*'
 alias dcrr='dcr bin/rspec $*'
+alias dsp='d system prune $*' 
 
 # This repo: https://github.com/lsfernandes92/dockerizando_rails.git
 # Contains the files needed to create a Ruby on Rails with Postgresql container.
