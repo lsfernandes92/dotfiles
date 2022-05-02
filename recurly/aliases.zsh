@@ -1,0 +1,5 @@
+alias r='recurly $*'
+alias rr='recurly run $*'
+alias rb='recurly run recurly-app bash'
+alias rrails='recurly run recurly-app rails'
+alias rfullrestart='recurly down && recurly system down && recurly pull && recurly up'
