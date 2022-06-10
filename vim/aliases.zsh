@@ -1,1 +1,1 @@
-alias vimrc="atom ~/.dotfiles/vim/vimrc.symlink"
+alias vimrc="code ~/.dotfiles/vim/vimrc.symlink"

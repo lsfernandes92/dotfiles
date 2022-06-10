@@ -29,7 +29,6 @@ brew 'icu4c'
 brew 'libidn2'
 brew 'libtool'
 
-cask 'atom'
 cask 'firefox'
 cask 'google-chrome'
 cask 'microsoft-edge'

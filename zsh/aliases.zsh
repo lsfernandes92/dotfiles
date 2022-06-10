@@ -11,4 +11,4 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Shortcuts
-alias zshrc="atom ~/.dotfiles/zsh/zshrc.symlink"
+alias zshrc="code ~/.dotfiles/zsh/zshrc.symlink"

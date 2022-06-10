@@ -39,15 +39,12 @@ then
 
   # Most used Apps
   echo "Installing system apps..."
-  # Repo atom dependency
-  wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-  sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
   # Repo chrome dependecy
   wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
   sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
   sudo apt-get -y update
-  sudo apt install -y atom google-chrome-stable docker firefox microsoft-edge-beta slack steam spotify
+  sudo apt install -y google-chrome-stable docker firefox microsoft-edge-beta slack steam spotify
 
   if [[ $create_ssh == "y" || $create_ssh == "Y" || $create_ssh == "yes" ]]; then
       echo "**SSH Key Generation**"
