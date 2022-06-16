@@ -1,0 +1,19 @@
+{
+    "workbench.colorTheme": "GitHub Dark Dimmed",
+    "editor.minimap.enabled": false,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "gitlens.views.showRelativeDateMarkers": false,
+    "gitlens.views.commits.showBranchComparison": false,
+    "gitlens.views.commits.pullRequests.showForBranches": false,
+    "gitlens.views.commits.pullRequests.enabled": false,
+    "workbench.activityBar.visible": false,
+    "window.zoomLevel": 1,
+    "workbench.sideBar.location": "right",
+    "editor.tabSize": 6,
+    "workbench.tree.indent": 20,
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#ffffff",
+        "editorIndentGuide.activeBackground": "#fe5900",
+        "editorIndentGuide.background": "#ffffff"
+    }    
+}

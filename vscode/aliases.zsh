@@ -1,0 +1,1 @@
+alias vscodebackup='cp $HOME/Library/Application\ Support/Code/User/settings.json $HOME/.dotfiles/vscode && cp $HOME/Library/Application\ Support/Code/User/keybindings.json $HOME/.dotfiles/vscode'
