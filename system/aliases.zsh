@@ -12,3 +12,6 @@ fi
 # Shortcuts
 alias ip="ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'"
 alias dotfiles="code ~/.dotfiles"
+alias update-brew='brew update; brew upgrade; brew cleanup'
+alias update-software='sudo softwareupdate -ia --verbose'
+alias update='update-brew && update-software && mas upgrade'
