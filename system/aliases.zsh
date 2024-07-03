@@ -16,3 +16,12 @@ alias update-brew='brew update; brew upgrade; brew cleanup'
 alias update-software='sudo softwareupdate -ia --verbose'
 alias update='update-brew && update-software && mas upgrade'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+
+# Navigation
+alias cls="clear"
+alias ..="cd .."
+alias home="cd"
+alias desenv="cd ~/Documents/desenv"
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
