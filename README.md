@@ -33,8 +33,7 @@ use, and build on what you do use.
 
 There's a few special files in the hierarchy.
 
-- **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
-  available everywhere. To make it work, I created a symlink using `$sudo ln -s /Users/ritalee/.dotfiles/bin/battery-status /usr/local/bin.` The author mentions that this isn't necessary since rbenv will take care of the bin, but I don't understand that yet. See [this commit](https://github.com/lsfernandes92/dotfiles/commit/2f9c1bcf234bbc19395ea34feca850b9abdb056a).
+- **bin/**: Anything in `bin/` will get added to your `$PATH` and be made available everywhere. To make individual scripts work, run the script `add-bins` located in that same folder. First, give it execution permissions with the command `$ sudo chmod +x add-bins`. After that, run the command with `$ ./add-bins <BIN_NAME>` and pass the bin you want to make executable system-wide. You can also pass multiple bins separated by space at once. By doing this, the binary will be added as a "shim" in your rbenv directory, so you need to have rbenv installed before doing this.
 - **Brewfile**: This is a list of applications for [Homebrew Cask](https://caskroom.github.io) to install: things like Chrome and 1Password and Adium and stuff. Might want to edit this file before running any initial setup.
 - **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
   environment.
