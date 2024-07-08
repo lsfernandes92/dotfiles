@@ -33,15 +33,27 @@ use, and build on what you do use.
 
 There's a few special files in the hierarchy.
 
-- **bin/**: Anything in `bin/` will get added to your `$PATH` and be made available everywhere. To make individual scripts work, run the script `add-bins` located in that same folder. First, give it execution permissions with the command `$ sudo chmod +x add-bins`. After that, run the command with `$ ./add-bins <BIN_NAME>` and pass the bin you want to make executable system-wide. You can also pass multiple bins separated by space at once. By doing this, the binary will be added as a "shim" in your rbenv directory, so you need to have rbenv installed before doing this.
-- **Brewfile**: This is a list of applications for [Homebrew Cask](https://caskroom.github.io) to install: things like Chrome and 1Password and Adium and stuff. Might want to edit this file before running any initial setup.
+- **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
+  available everywhere. To make individual scripts work, run the script
+  `add-bins` located in that same folder. First, give it execution permissions
+  with the command `$ sudo chmod +x add-bins`. After that, run the command with
+  `$ ./add-bins <BIN_NAME>` and pass the bin you want to make executable
+  system-wide. You can also pass multiple bins separated by space at once. By
+  doing this, the binary will be added as a "shim" in your rbenv directory, so
+  **you need to have rbenv installed before doing this.**
+- **Brewfile**: This is a list of applications for
+  [Homebrew Cask](https://caskroom.github.io) to install: things like Chrome and
+  1Password and Adium and stuff. Might want to edit this file before running any
+  initial setup.
 - **topic/\*.zsh**: Any files ending in `.zsh` get loaded into your
   environment.
 - **topic/path.zsh**: Any file named `path.zsh` is loaded first and is
   expected to setup `$PATH` or similar.
 - **topic/completion.zsh**: Any file named `completion.zsh` is loaded
   last and is expected to setup autocomplete.
-- **topic/install.sh**: Any file named `install.sh` is executed when you run `script/install`. To avoid being loaded automatically, its extension is `.sh`, not `.zsh`.
+- **topic/install.sh**: Any file named `install.sh` is executed when you run
+  `script/install`. To avoid being loaded automatically, its extension is
+  `.sh`, not `.zsh`.
 - **topic/\*.symlink**: Any file ending in `*.symlink` gets symlinked into
   your `$HOME`. This is so you can keep all of those versioned in your dotfiles
   but still keep those autoloaded files in your home directory. These get
@@ -57,11 +69,18 @@ cd ~/.dotfiles
 script/install
 ```
 
-The install script will grap all the `topic/install.sh` files in this repo and perform system updates. For linux for example it will update the `apt-get` repo and install basic packages, some developer libraries, databases, security and privacy packages, most used apps and useful tools.
+The install script will grap all the `topic/install.sh` files in this repo and
+perform system updates. For linux for example it will update the `apt-get` repo
+and install basic packages, some developer libraries, databases, security and
+privacy packages, most used apps and useful tools.
 
-Note: if any `.sh` file fails to run append the correct access permissions to the file by giving it's execute permission. You can do that by typing the command in your shell: `$chmod -x <SH_SCRIPT_FILE>`
+Note: if any `.sh` file fails to run append the correct access permissions to
+the file by giving it's execute permission. You can do that by typing the
+command in your shell: `$chmod -x <SH_SCRIPT_FILE>`
 
-Note2: The install script include the installation of `zsh`, but to that take effect and to make the `zsh` your default shell take a look at [this](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
+Note2: The install script include the installation of `zsh`, but to that take
+effect and to make the `zsh` your default shell take a look at
+[this](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 
 After that, run the following:
 
@@ -79,6 +98,9 @@ which sets up a few paths that'll be different on your particular machine.
 defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
+
+Another way that to stay up-to-date is to run the alias command `update!` that
+is found [here](https://github.com/lsfernandes92/dotfiles/blob/30f6619679520a04518986e3cdbc31b39ecdc274/system/aliases.zsh#L17).
 
 ## bugs
 
