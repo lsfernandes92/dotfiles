@@ -1,6 +1,7 @@
 alias d='docker $*'
 alias dc='docker compose $*'
 alias dcu="dc up -d"
+alias dcub="dc up -d --build"
 alias dcd="dc down"
 alias dsa='docker stop $(docker ps -a -q)'
 alias dcr='dc run web $*'
