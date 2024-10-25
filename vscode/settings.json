@@ -1,19 +1,69 @@
 {
-    "workbench.colorTheme": "GitHub Dark Dimmed",
-    "editor.minimap.enabled": false,
-    "terminal.integrated.defaultProfile.osx": "zsh",
-    "gitlens.views.showRelativeDateMarkers": false,
-    "gitlens.views.commits.showBranchComparison": false,
-    "gitlens.views.commits.pullRequests.showForBranches": false,
-    "gitlens.views.commits.pullRequests.enabled": false,
-    "workbench.activityBar.visible": false,
-    "window.zoomLevel": 1,
-    "workbench.sideBar.location": "right",
-    "editor.tabSize": 6,
-    "workbench.tree.indent": 20,
-    "workbench.colorCustomizations": {
-        "tree.indentGuidesStroke": "#ffffff",
-        "editorIndentGuide.activeBackground": "#fe5900",
-        "editorIndentGuide.background": "#ffffff"
-    }    
+    "workbench.colorTheme": "GitHub Dark",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.labelFormat": "short",
+    "workbench.activityBar.location": "hidden",
+    "liveServer.settings.port": 5555,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tabSize": 2,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "github.copilot.editor.enableAutoCompletions": false,
+    "editor.fontFamily": "'Fira Code', Monolisa, Cascadia Code, Hack, Monaco, Menlo, 'Courier New', monospace",
+    "editor.fontSize": 11,
+    "editor.lineHeight": 1.8,
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.renderLineHighlight": "gutter",
+    "editor.fontLigatures": true,
+    "editor.semanticHighlighting.enabled": false,
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "window.zoomLevel": 0.1,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.layoutControl.enabled": false,
+    "symbols.hidesExplorerArrows": false,
+    "explorer.compactFolders": false,
+    "window.titleBarStyle": "native",
+    "apc.electron": {
+        "titleBarStyle": "hiddenInset",
+        "trafficLightPosition": {
+            "x": 5,
+            "y": 12
+        },
+        "frame": false
+    },
+    "apc.header": {
+        "height": 36
+    },
+    "apc.font.family": "Monaco",
+    "apc.stylesheet": {
+        ".title-label > h2": "display: none",
+        ".editor-actions": "display: none",
+        ".pane-body": "padding: 8px",
+        ".pane-header": "padding: 0 8px",
+    },
+    "apc.listRow": {
+        "height": 24
+    },
+    "window.commandCenter": false,
+    "explorer.fileNesting.patterns": {
+        "package.json": ".eslint*, prettier*, tsconfig*, vite*, pnpm-lock*, bun.lockb, nest*",
+        "tailwind.config.js": "tailwind.config*, postcss.config*",
+        ".env.local": ".env*",
+        ".env": ".env*"
+    },
+    "workbench.editorAssociations": {
+        "*.html": "default"
+    },
+    "pieces.do-not-show-download-cta": true,
+    "redhat.telemetry.enabled": false,
+    "git.autofetch": true
 }

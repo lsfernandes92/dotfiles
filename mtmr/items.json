@@ -1,0 +1,63 @@
+[
+  {
+    "type": "weather",
+    "align": "left",
+    "icon_type": "images",
+    "api_key": "fcd933fb6c17f4bc58bceb31479c5f11",
+    "bordered": false
+  },
+  {
+    "type": "appleScriptTitledButton",
+    "source": {
+      "filePath": "~/Library/Application Support/MTMR/youtube_music.scpt"
+    },
+    "action": "appleScript",
+    "actionAppleScript": {
+      "inline": "open https://toms.toys"
+    },
+    "refreshInterval": 1,
+    "image": {
+      "filePath": "~/Library/Application Support/MTMR/youtube_music_ico.png"
+    }
+  },
+  {"type": "staticButton", "title": "⎜", "bordered": false, "align": "right", "width": 32 },
+  { "type": "brightnessDown", "width": 52, "bordered": false, "align": "right" },
+  { "type": "brightnessUp", "width": 52, "bordered": false, "align": "right" },
+  {
+    "type": "volumeDown",
+    "bordered": false,
+    "align": "right",
+    "width": 52
+  },
+  {
+    "type": "volumeUp",
+    "bordered": false,
+    "align": "right",
+    "width": 52
+  },
+  {
+    "type": "play",
+    "align": "right",
+    "width": 52
+  },
+  {
+    "type": "next",
+    "align": "right",
+    "width": 52
+  },
+  {"type": "staticButton", "title": "⎜", "bordered": false, "align": "right", "width": 32 },
+  {
+    "type": "battery",
+    "align": "right",
+    "bordered": false
+  },
+  {
+    "type": "timeButton",
+    "formatTemplate": "E d MMM, HH:mm",
+    "align": "right",
+    "bordered": false,
+    "longAction": "shellScript",
+    "longExecutablePath": "/usr/bin/pmset",
+    "longShellArguments": ["sleepnow"]
+  }
+]

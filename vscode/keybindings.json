@@ -5,7 +5,7 @@
         "command": "git.clean"
     },
     {
-        "key": "cmd+1",
+        "key": "alt+1",
         "command": "workbench.action.openEditorAtIndex1"
     },
     {
@@ -13,7 +13,7 @@
         "command": "-workbench.action.openEditorAtIndex1"
     },
     {
-        "key": "cmd+2",
+        "key": "alt+2",
         "command": "workbench.action.openEditorAtIndex2"
     },
     {
@@ -21,7 +21,7 @@
         "command": "-workbench.action.openEditorAtIndex2"
     },
     {
-        "key": "cmd+3",
+        "key": "alt+3",
         "command": "workbench.action.openEditorAtIndex3"
     },
     {
@@ -29,7 +29,7 @@
         "command": "-workbench.action.openEditorAtIndex3"
     },
     {
-        "key": "cmd+4",
+        "key": "alt+4",
         "command": "workbench.action.openEditorAtIndex4"
     },
     {
@@ -77,17 +77,12 @@
         "command": "-workbench.action.openEditorAtIndex9"
     },
     {
-        "key": "ctrl+9",
-        "command": "workbench.view.scm",
-        "when": "workbench.scm.active"
-    },
-    {
         "key": "ctrl+shift+g",
         "command": "-workbench.view.scm",
         "when": "workbench.scm.active"
     },
     {
-        "key": "cmd+\\",
+        "key": "cmd+1",
         "command": "workbench.action.toggleSidebarVisibility"
     },
     {
@@ -95,7 +90,7 @@
         "command": "-workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "cmd+g",
+        "key": "cmd+2",
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
     },
@@ -119,5 +114,40 @@
     {
         "key": "cmd+m",
         "command": "explorer.newFolder"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "markdown.showLockedPreviewToSide"
+    },
+    {
+        "key": "cmd+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "cmd+r",
+        "command": "workbench.action.gotoMethod"
+    },
+    {
+        "key": "cmd+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.action.toggleAuxiliaryBar"
+    },
+    {
+        "key": "alt+cmd+b",
+        "command": "-workbench.action.toggleAuxiliaryBar"
+    },
+    {
+        "key": "cmd+backspace",
+        "command": "deleteFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "alt+cmd+backspace",
+        "command": "-deleteFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
     }
 ]
