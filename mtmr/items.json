@@ -47,9 +47,38 @@
   },
   {"type": "staticButton", "title": "⎜", "bordered": false, "align": "right", "width": 32 },
   {
-    "type": "battery",
+    "title": "cpuStats",
+    "type": "shellScriptTitledButton",
+    "width": 80,
+    "refreshInterval": 2,
+    "source": {
+      "inline": "top -l 2 -n 0 -F | egrep -o ' \\d*\\.\\d+% idle' | tail -1 | awk -F% '{p = 100 - $1; if (p > 30) c = \"\\033[33m\"; if (p > 70) c = \"\\033[30;43m\"; printf \"%s%4.1f%%\\n\", c, p}'"
+    },
+    "action": "appleScript",
+    "actionAppleScript": {
+      "inline": "activate application \"Activity Monitor\"\rtell application \"System Events\"\r\ttell process \"Activity Monitor\"\r\t\ttell radio button \"CPU\" of radio group 1 of group 2 of toolbar 1 of window 1 to perform action \"AXPress\"\r\tend tell\rend tell"
+    },
     "align": "right",
+    "image": {
+      "filePath": "~/Pictures/mtmr/cpu.png"
+    },
     "bordered": false
+  },
+  {
+    "title": "ramStats",
+    "type": "appleScriptTitledButton",
+    "source": {
+      "inline": "set mem to do shell script \"ps -A -o %mem | awk '{s+=$1}END{print s}'\"\rreturn mem & \"%\""
+    },
+    "action": "appleScript",
+    "actionAppleScript": {
+      "inline": "activate application \"Activity Monitor\"\rtell application \"System Events\"\r\ttell process \"Activity Monitor\"\r\t\ttell radio button \"CPU\" of radio group 1 of group 2 of toolbar 1 of window 1 to perform action \"AXPress\"\r\tend tell\rend tell"
+    },
+    "refreshInterval": 2,
+    "align": "right",
+    "image": {
+      "filePath": "~/Pictures/mtmr/ram.png"
+    }
   },
   {
     "type": "timeButton",
