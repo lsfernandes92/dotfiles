@@ -25,3 +25,12 @@ alias desenv="cd ~/Documents/desenv"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# cli
+# cmatrix is a command-line utility that displays a scrolling "Matrix"-style
+# digital rain effect in your terminal, inspired by the movie "The Matrix." It is
+# popular among Linux and Unix users for its visual effect.
+# 
+# GitHub repository:
+# https://github.com/abishekvashok/cmatrix
+alias matrix="cmatrix -s"
