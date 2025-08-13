@@ -1,0 +1,65 @@
+:root {
+  --primary-fonts: Menlo, "Fira Code", Hack, Monaco, Monolisa, "Cascadia Code",
+    monospace;
+}
+
+/* 
+  This remove the "headers" from 
+  the left sidebar, the right auxiliary bar
+  and from the terminal view (.basepanel.bottom).
+*/
+.composite.title {
+  display: none !important;
+}
+
+/* 
+  Additionally, the following adjust the padding for each
+  view bc when removing the ".composite.title"
+  a weird bar at the bottom of each view
+  appears.
+*/
+.sidebar {
+  font-family: var(--primary-fonts);
+  height: 100%;
+  flex: 1;
+  padding: 20px 0px;
+}
+
+.basepanel.bottom {
+  height: 100%;
+  flex: 1;
+  padding: 20px 0px;
+}
+
+.auxiliarybar {
+  font-family: var(--primary-fonts);
+  height: 100%;
+  flex: 1;
+  padding: 20px 0px;
+}
+
+/* More compact tabs */
+.tabs {
+  height: 20px;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Preferred centered command palette */
+.quick-input-widget {
+  font-family: var(--primary-fonts);
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 600px;
+  box-shadow: none !important;
+}
+
+.title.show-file-icons {
+  justify-content: center;
+  padding: 0 !important;
+}
