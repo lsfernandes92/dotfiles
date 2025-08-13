@@ -16,6 +16,7 @@ alias update-brew='brew update; brew upgrade; brew cleanup'
 alias update-software='sudo softwareupdate -ia --verbose'
 alias update!='update-brew && update-software && mas upgrade'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+alias backup='mtmrbackup && vscodebackup'
 
 # Navigation
 alias cls="clear"
