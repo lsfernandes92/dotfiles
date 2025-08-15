@@ -1,0 +1,1 @@
+alias mtmrbackup='cp "$HOME/Library/Application Support/MTMR/items.json" "$HOME/.dotfiles/mtmr"'
