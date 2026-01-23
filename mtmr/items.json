@@ -4,7 +4,11 @@
     "align": "left",
     "icon_type": "images",
     "api_key": "fcd933fb6c17f4bc58bceb31479c5f11",
-    "bordered": false
+    "bordered": false,
+    "action": "appleScript",
+    "actionAppleScript": {
+      "inline": "tell application \"Weather\"\r\tactivate\rend tell"
+    },
   },
   {
     "title": "cpuStats",
@@ -14,10 +18,10 @@
     "source": {
       "inline": "top -l 1 | awk '/CPU usage/ {print $3 + $5 \"%\"}'"
     },
-    "action": "appleScript",
-    "actionAppleScript": {
-      "inline": "activate application \"Activity Monitor\"\rtell application \"System Events\"\r\ttell process \"Activity Monitor\"\r\t\ttell radio button \"CPU\" of radio group 1 of group 2 of toolbar 1 of window 1 to perform action \"AXPress\"\r\tend tell\rend tell"
-    },
+    // "action": "appleScript",
+    // "actionAppleScript": {
+    //   "inline": "activate application \"Activity Monitor\"\rtell application \"System Events\"\r\ttell process \"Activity Monitor\"\r\t\ttell radio button \"CPU\" of radio group 1 of group 2 of toolbar 1 of window 1 to perform action \"AXPress\"\r\tend tell\rend tell"
+    // },
     "align": "left",
     "image": {
       "filePath": "~/Pictures/mtmr/cpu.png"
@@ -30,10 +34,10 @@
     "source": {
       "inline": "set mem to do shell script \"ps -A -o %mem | awk '{s+=$1}END{print s}'\"\rreturn mem & \"%\""
     },
-    "action": "appleScript",
-    "actionAppleScript": {
-      "inline": "activate application \"Activity Monitor\"\rtell application \"System Events\"\r\ttell process \"Activity Monitor\"\r\t\ttell radio button \"CPU\" of radio group 1 of group 2 of toolbar 1 of window 1 to perform action \"AXPress\"\r\tend tell\rend tell"
-    },
+    // "action": "appleScript",
+    // "actionAppleScript": {
+    //   "inline": "activate application \"Activity Monitor\"\rtell application \"System Events\"\r\ttell process \"Activity Monitor\"\r\t\ttell radio button \"CPU\" of radio group 1 of group 2 of toolbar 1 of window 1 to perform action \"AXPress\"\r\tend tell\rend tell"
+    // },
     "refreshInterval": 2,
     "align": "left",
     "image": {
@@ -54,7 +58,7 @@
   //     "filePath": "~/Library/Application Support/MTMR/youtube_music_ico.png"
   //   }
   // },
-  {"type": "staticButton", "title": "⎜", "bordered": false, "align": "right", "width": 32 },
+  // {"type": "staticButton", "title": "⎜", "bordered": false, "align": "right", "width": 32 },
   { "type": "brightnessDown", "width": 52, "bordered": false, "align": "right" },
   { "type": "brightnessUp", "width": 52, "bordered": false, "align": "right" },
   {
@@ -88,5 +92,15 @@
     "longAction": "shellScript",
     "longExecutablePath": "/usr/bin/pmset",
     "longShellArguments": ["sleepnow"]
+  },
+  {
+    "type": "battery",
+    "width": 80,
+    "align": "right",
+    "bordered": false,
+    "image": {
+      "base64": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABk0lEQVRYR+2WvS9sURTFfwuJRCPCUxESFZEo8BIV3URnaCm0otGqFRIfnT9BI4pHfDSa17+8joZCQqIgGoWIxJIjd4TxzNw7ufPuFHOSU9179/7ddfZe+4iMlzLOTx2grkBtKWC7ERgDfqTcHS/AuaSz4rjvCtjuAQ6BAeAxZYAGoBnYAeYkPRfifwQ4AVqAGUk3KQNgOyh7AKxKWvsEYDskfgBykgJIVZbtdWBU0ngxQAdwCwxL+luV7BBUWAamJY1kCTALhH0p6f6tBmwnViDqmLyk3biK2V4AtqL3f0nKJwaI6mUeWAL6JCXyEtvtwArQK2kyNoDtTmARCH8RghRWK9AV7W6gCdgv1Um2N4H+2AC2h4AJ4A64Bq6AQWDvA0gwmQ1gW9JTqWNJDPCvYLZzwDHwGwjtdSTJ5eqh4iMoDmy7D2iT9Kdc0sLzoiLckzQVuwbiJikjffCBdNqwEqBSRvS/rDjMgJ9frDgyo+yGUQSQ7TiOIKp5IbmQdPrthaSSokrjm0Q+nkbCugJ1BWpOgVcHdcMhR477OAAAAABJRU5ErkJggg=="
+    }
   }
 ]
+
