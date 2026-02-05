@@ -5,10 +5,10 @@
     "icon_type": "images",
     "api_key": "fcd933fb6c17f4bc58bceb31479c5f11",
     "bordered": false,
-    "action": "appleScript",
-    "actionAppleScript": {
-      "inline": "tell application \"Weather\"\r\tactivate\rend tell"
-    },
+    // "action": "appleScript",
+    // "actionAppleScript": {
+    //   "inline": "tell application \"Weather\"\r\tactivate\rend tell"
+    // },
   },
   {
     "title": "cpuStats",
@@ -86,6 +86,7 @@
   {"type": "staticButton", "title": "⎜", "bordered": false, "align": "right", "width": 32 },
   {
     "type": "timeButton",
+    "width": 120,
     "formatTemplate": "E d MMM, HH:mm",
     "align": "right",
     "bordered": false,
@@ -95,12 +96,11 @@
   },
   {
     "type": "battery",
-    "width": 80,
+    "width": 60,
     "align": "right",
     "bordered": false,
-    "image": {
-      "base64": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABk0lEQVRYR+2WvS9sURTFfwuJRCPCUxESFZEo8BIV3URnaCm0otGqFRIfnT9BI4pHfDSa17+8joZCQqIgGoWIxJIjd4TxzNw7ufPuFHOSU9179/7ddfZe+4iMlzLOTx2grkBtKWC7ERgDfqTcHS/AuaSz4rjvCtjuAQ6BAeAxZYAGoBnYAeYkPRfifwQ4AVqAGUk3KQNgOyh7AKxKWvsEYDskfgBykgJIVZbtdWBU0ngxQAdwCwxL+luV7BBUWAamJY1kCTALhH0p6f6tBmwnViDqmLyk3biK2V4AtqL3f0nKJwaI6mUeWAL6JCXyEtvtwArQK2kyNoDtTmARCH8RghRWK9AV7W6gCdgv1Um2N4H+2AC2h4AJ4A64Bq6AQWDvA0gwmQ1gW9JTqWNJDPCvYLZzwDHwGwjtdSTJ5eqh4iMoDmy7D2iT9Kdc0sLzoiLckzQVuwbiJikjffCBdNqwEqBSRvS/rDjMgJ9frDgyo+yGUQSQ7TiOIKp5IbmQdPrthaSSokrjm0Q+nkbCugJ1BWpOgVcHdcMhR477OAAAAABJRU5ErkJggg=="
-    }
+    // "image": {
+    //   "base64": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABk0lEQVRYR+2WvS9sURTFfwuJRCPCUxESFZEo8BIV3URnaCm0otGqFRIfnT9BI4pHfDSa17+8joZCQqIgGoWIxJIjd4TxzNw7ufPuFHOSU9179/7ddfZe+4iMlzLOTx2grkBtKWC7ERgDfqTcHS/AuaSz4rjvCtjuAQ6BAeAxZYAGoBnYAeYkPRfifwQ4AVqAGUk3KQNgOyh7AKxKWvsEYDskfgBykgJIVZbtdWBU0ngxQAdwCwxL+luV7BBUWAamJY1kCTALhH0p6f6tBmwnViDqmLyk3biK2V4AtqL3f0nKJwaI6mUeWAL6JCXyEtvtwArQK2kyNoDtTmARCH8RghRWK9AV7W6gCdgv1Um2N4H+2AC2h4AJ4A64Bq6AQWDvA0gwmQ1gW9JTqWNJDPCvYLZzwDHwGwjtdSTJ5eqh4iMoDmy7D2iT9Kdc0sLzoiLckzQVuwbiJikjffCBdNqwEqBSRvS/rDjMgJ9frDgyo+yGUQSQ7TiOIKp5IbmQdPrthaSSokrjm0Q+nkbCugJ1BWpOgVcHdcMhR477OAAAAABJRU5ErkJggg=="
+    // }
   }
 ]
-
