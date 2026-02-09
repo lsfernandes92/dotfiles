@@ -8,8 +8,8 @@ cd "$(dirname $0)"/..
 
 if test "$(uname)" = "Darwin"
 then
-  echo "› brew bundle"
-  brew bundle
+  echo "› brew bundle install"
+  brew bundle install
 fi
 
 # find the installers and run them iteratively

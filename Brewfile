@@ -31,17 +31,45 @@ brew 'libtool'
 brew 'mas'
 brew 'tree'
 brew 'duti'
+brew "cmatrix"
 
+# .browser
 # cask 'firefox'
 # cask 'google-chrome'
 # cask 'microsoft-edge'
 cask 'zen'
-cask 'slack'
-cask 'iterm2'
-cask 'docker'
-# cask 'bartender'
+
+# .spotlight
+# cask 'alfred'
+cask 'raycast'
+
+# .commu
+# cask 'slack'
+# cask 'discord'
+# cask 'whatsapp'
+
+# .utility
+cask 'stats'
+cask 'appcleaner'
+cask 'balenaetcher'
 cask 'vlc'
 cask 'mtmr'
-cask 'stats'
-cask 'raycast'
 cask 'hiddenbar'
+cask 'megasync'
+cask 'onionshare'
+cask 'pritunl'
+cask 'sonic-pi'
+mas "Magnet", id: 441258766
+# cask 'tageditor'
+mas "Tag Editor 2", id: 984278082
+
+# .note
+cask 'obsidian'
+cask 'notion'
+
+# .dev
+cask 'iterm2'
+cask 'docker'
+
+# .editor
+cask 'visual-studio-code'
