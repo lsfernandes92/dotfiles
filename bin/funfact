@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+#
+# Outputs a random fun fact in your terminal
+#
+# When it gets run it simply outputs a 
+# random fun fact in your terminal.
+#
+# USAGE:
+#
+#   $ ./funfact
+#   # => outputs a random fun fact in your terminal
+require 'json'
+
+string_response = `curl https://useless.dotenv.dev/api/random 2>/dev/null`
+hash_response = JSON.parse(string_response)
+
+puts hash_response.dig('fact')

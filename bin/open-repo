@@ -1,0 +1,70 @@
+#!/usr/bin/env ruby
+#
+# Open user GitHub repository
+#
+# This script retrieves all repositories
+# for a specified username and displays
+# them in a numbered list. You can then
+# select a repository by entering its
+# corresponding number to open it in
+# your browser.
+# 
+# This script allows you to configure
+# two global variables:
+#
+# <USERNAME> - The GitHub username whose repositories will be fetched.
+# <PER_PAGE> - The number of repositories to retrieve per API request.
+#
+# USAGE:
+#
+#   $ ./open-repo
+#   # => opens the selected repository in your default web browser
+require 'json'
+
+USERNAME = 'lsfernandes92'
+PER_PAGE = 1000
+
+def collected_repos
+  my_repos = []
+
+  json_repositories_response.each do |repo|
+    my_repos << collect_repo(repo)
+  end
+
+  my_repos
+end
+
+def json_repositories_response
+  JSON.parse(get_user_repositories)  
+end
+
+def get_user_repositories
+  `curl https://api.github.com/users/#{USERNAME}/repos?per_page=#{PER_PAGE}  2>/dev/null`
+end
+
+def collect_repo(repo)
+  name = repo['name']
+  html_url = repo['html_url']
+  { name:, html_url: }
+end
+
+numbered_repos = {}
+
+puts '🗂️  My github repositories list:'
+puts
+collected_repos.each_with_index do |repo, index|
+  puts "#{index}. #{repo[:name]}"
+  numbered_repos.merge!({"#{index}": repo[:html_url]})
+end
+
+puts
+puts '💬 Which repo do you want to open?'
+repo_number = gets.chomp
+
+if RbConfig::CONFIG['host_os'] =~ /mswin|mingw|cygwin/
+  system "start #{numbered_repos[:"#{repo_number}"]}"
+elsif RbConfig::CONFIG['host_os'] =~ /darwin/
+  system "open #{numbered_repos[:"#{repo_number}"]}"
+elsif RbConfig::CONFIG['host_os'] =~ /linux|bsd/
+  system "xdg-open #{numbered_repos[:"#{repo_number}"]}"
+end

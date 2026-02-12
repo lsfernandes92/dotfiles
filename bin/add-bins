@@ -3,7 +3,7 @@
 # Make individual bin executable system-wide.
 #
 # This means the binary will be added to `/usr/local/bin`, which is in your
-# `$PATH` by default. Anything in your $PATH is available from anywhere in your
+# `$PATH` by default. Anything in your `$PATH` is available from anywhere in your
 # system.
 #
 # Multiple binaries can be added at once. For this, please list them separated
