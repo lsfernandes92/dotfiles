@@ -33,14 +33,11 @@ use, and build on what you do use.
 
 There's a few special files in the hierarchy.
 
-- **bin/**: Anything in `bin/` will get added to your `$PATH` and be made
-  available everywhere. To make individual scripts work, run the script
-  `add-bins` located in that same folder. First, give it execution permissions
-  with the command `$ sudo chmod +x add-bins`. After that, run the command with
-  `$ ./add-bins <BIN_NAME>` and pass the bin you want to make executable
-  system-wide. You can also pass multiple bins separated by space at once. By
-  doing this, the binary will be added as a "shim" in your rbenv directory, so
-  **you need to have rbenv installed before doing this.**
+- **bin/**: Files in `bin/` are scripts that do magic when you run them. To make
+  individual scripts work, run the script `add-bins` located in that same
+  folder. By doing this, the binary will be added to `/usr/local/bin`, which is
+  in your `$PATH` by default. Anything in your `$PATH` is available from
+  anywhere in your system.
 - **Brewfile**: This is a list of applications for
   [Homebrew Cask](https://caskroom.github.io) to install: things like Chrome and
   1Password and Adium and stuff. Might want to edit this file before running any
@@ -106,7 +103,7 @@ is found [here](https://github.com/lsfernandes92/dotfiles/blob/30f6619679520a045
 
 I want this to work for everyone; that means when you clone it down it should
 work for you even though you may not have `rbenv` installed, for example. That
-said, I do use this as *my* dotfiles, so there's a good chance I may break
+said, I do use this as _my_ dotfiles, so there's a good chance I may break
 something if I forget to make a check for a dependency.
 
 If you're brand-new to the project and run into any blockers, please
