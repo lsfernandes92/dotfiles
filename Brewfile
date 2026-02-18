@@ -59,6 +59,7 @@ cask 'megasync'
 cask 'onionshare'
 cask 'pritunl'
 cask 'sonic-pi'
+cask 'karabiner-elements'
 mas "Magnet", id: 441258766
 # cask 'tageditor'
 mas "Tag Editor 2", id: 984278082

@@ -1,0 +1,1 @@
+alias karabinerbackup='cp "$HOME/.config/karabiner/karabiner.json" "$HOME/.dotfiles/karabiner"'
