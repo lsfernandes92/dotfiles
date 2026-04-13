@@ -1,3 +1,8 @@
 #!/usr/bin/env ruby
-
+#
+# Simply restart your operational system.
+#
+# USAGE:
+#
+#   $ ./restart!
 `sudo shutdown -r now`
