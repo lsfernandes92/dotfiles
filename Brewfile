@@ -74,3 +74,6 @@ cask 'docker'
 
 # .editor
 cask 'visual-studio-code'
+
+# .vpn
+cask 'surfshark'
