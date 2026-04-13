@@ -1,16 +1,16 @@
 alias ip="ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'"
 alias dotfiles="$EDITOR ~/.dotfiles"
 alias sonicpi-configs="$EDITOR ~/.sonic-pi/config/audio-settings.toml"
-alias update-brew='brew update; brew upgrade; brew cleanup'
-alias update-software='sudo softwareupdate -ia --verbose'
+alias brew-update!='brew update; brew upgrade; brew cleanup'
+alias software-update!='sudo softwareupdate -ia --verbose'
 alias update!='update-brew && update-software && mas upgrade'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
-alias backup='mtmrbackup; vscodebackup; karabinerbackup'
+alias backup!='mtmrbackup; vscodebackup; karabinerbackup'
 
-# cli utility that displays
-# a scrolling matrix-style
-# digital rain effect in terminal
-# 
+# cli utility
+# displays scrolling digital rain
+# matrix-style effect
+# in terminal
 # https://github.com/abishekvashok/cmatrix
 alias matrix="cmatrix -s"
 

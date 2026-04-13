@@ -26,8 +26,14 @@ More about symbolic link can be found in [here](https://www.freecodecamp.org/new
 
 A lot of stuff. Seriously, a lot of stuff. Check them out in the file browser
 above and see what components may mesh up with you.
-[Fork it](https://github.com/holman/dotfiles/fork), remove what you don't
-use, and build on what you do use.
+[Fork it](https://github.com/holman/dotfiles/fork), remove what you don't use,
+and build on what you do use.
+
+Examples are:
+
+```shell
+$ update! # => Updates apple system softwares, mac apps from store and homebrew
+```
 
 ## components
 
