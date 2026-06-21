@@ -133,10 +133,6 @@
     "command": "-workbench.action.showAllSymbols"
   },
   {
-    "key": "cmd+3",
-    "command": "workbench.action.toggleAuxiliaryBar"
-  },
-  {
     "key": "alt+cmd+b",
     "command": "-workbench.action.toggleAuxiliaryBar"
   },
@@ -159,5 +155,15 @@
     "key": "ctrl+q",
     "command": "workbench.action.quickOpen",
     "args": ">View: Open View"
+  },
+  {
+    "key": "cmd+3",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
   }
 ]

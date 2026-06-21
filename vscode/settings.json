@@ -1,4 +1,7 @@
 {
+  "sonicpi.path": "/Applications/Sonic Pi.app/Contents/Resources/app/server/ruby/bin",
+  "sonicpi.ruby": "/Applications/Sonic Pi.app/Contents/Resources/app/server/native/ruby/bin/ruby",
+  "sonicpi.startServerOnActivate": true,
   "editor.tabSize": 2,
   "editor.padding.top": 30,
   "editor.padding.bottom": 30,
@@ -15,14 +18,15 @@
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
   "window.zoomLevel": 2.1,
-  "workbench.colorTheme": "Best Themes - Xcode Fusion",
+  "workbench.colorTheme": "Nec Terminal Theme",
 
   // Terminal preferences
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "block",
   "terminal.integrated.fontFamily": "Monaco, 'Fira Code', monospace",
-  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontSize": 12,
   "terminal.integrated.fontWeight": "bold",
+  "terminal.integrated.defaultLocation": "view",
 
   // General editor preferences
   "diffEditor.ignoreTrimWhitespace": false,

@@ -1,0 +1,1 @@
+alias sketchybarbackup='cp "$HOME/.config/sketchybar/sketchybarrc" "$HOME/.dotfiles/sketchybar" && cp -R "$HOME/.config/sketchybar/plugins/." "$HOME/.dotfiles/sketchybar/plugins"'

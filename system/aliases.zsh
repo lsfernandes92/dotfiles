@@ -3,9 +3,9 @@ alias dotfiles="$EDITOR ~/.dotfiles"
 alias sonicpi-configs="$EDITOR ~/.sonic-pi/config/audio-settings.toml"
 alias brew-update!='brew update; brew upgrade; brew cleanup'
 alias software-update!='sudo softwareupdate -ia --verbose'
-alias update!='update-brew && update-software && mas upgrade'
+alias update!='brew-update! && software-update! && mas upgrade'
 alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
-alias backup!='mtmrbackup; vscodebackup; karabinerbackup'
+alias backup!='mtmrbackup; vscodebackup; karabinerbackup; sketchybarbackup'
 
 # cli utility
 # displays scrolling digital rain

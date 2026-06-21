@@ -1,0 +1,145 @@
+# This is a demo config to showcase some of the most important commands.
+# It is meant to be changed and configured, as it is intentionally kept sparse.
+# For a (much) more advanced configuration example see my dotfiles:
+# https://github.com/FelixKratz/dotfiles
+
+##### Constants #####
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+BG_COLOR="0xff0b1510"
+ICON_FONT="Hack Nerd Font:Bold:17.0"
+ICON_COLOR="0xffffd303"
+LABEL_FONT="Hack Nerd Font:Bold:14.0"
+LABEL_COLOR="0xff3fff8c"
+CPU_ICON_FONT="Hack Nerd Font:Bold:9"
+CPU_LABEL_FONT="Hack Nerd Font:Bold:12"
+MEM_ICON_FONT="Hack Nerd Font:Bold:9"
+MEM_LABEL_FONT="Hack Nerd Font:Bold:12"
+
+##### Bar Appearance #####
+# Configuring the general appearance of the bar.
+# These are only some of the options available. For all options see:
+# https://felixkratz.github.io/SketchyBar/config/bar
+# If you are looking for other colors, see the color picker:
+# https://felixkratz.github.io/SketchyBar/config/tricks#color-picker
+sketchybar --bar position=top height=20 blur_radius=30 color=$BG_COLOR
+
+##### Changing Defaults #####
+# We now change some default values, which are applied to all further items.
+# For a full list of all available item properties see:
+# https://felixkratz.github.io/SketchyBar/config/items
+default=(
+  padding_left=5
+  padding_right=5
+  icon.font="$ICON_FONT"
+  label.font="$LABEL_FONT"
+  icon.color="$ICON_COLOR"
+  label.color="$LABEL_COLOR"
+  icon.padding_left=2
+  label.padding_left=2
+)
+sketchybar --default "${default[@]}"
+
+##### Adding Mission Control Space Indicators #####
+# Let's add some mission control spaces:
+# https://felixkratz.github.io/SketchyBar/config/components#space----associate-mission-control-spaces-with-an-item
+# to indicate active and available mission control spaces.
+SPACE_ICONS=("1" "2" "3" "4" "5" "6" "7" "8" "9" "10")
+for i in "${!SPACE_ICONS[@]}"
+do
+  sid="$(($i+1))"
+  space=(
+    space="$sid"
+    icon="${SPACE_ICONS[i]}"
+    icon.padding_left=7
+    icon.padding_right=7
+    background.color=0xff0b1510
+    background.corner_radius=5
+    background.height=25
+    label.drawing=off
+    script="$PLUGIN_DIR/space.sh"
+    click_script="yabai -m space --focus $sid"
+  )
+  sketchybar --add space space."$sid" left --set space."$sid" "${space[@]}"
+done
+
+##### Adding Left Items #####
+# We add some regular items to the left side of the bar, where
+# only the properties deviating from the current defaults need to be set
+#### Chevron
+sketchybar --add item chevron left \
+           --set chevron icon= \
+           --set chevron label.drawing=off \
+
+#### Front app
+sketchybar --add item front_app left \
+           --set front_app icon.drawing=off \
+           --set front_app script="$PLUGIN_DIR/front_app.sh" \
+           --subscribe front_app front_app_switched \
+
+##### Adding Right Items #####
+# In the same way as the left items we can add items to the right side.
+# Additional position (e.g. center) are available, see:
+# https://felixkratz.github.io/SketchyBar/config/items#adding-items-to-sketchybar
+
+# Some items refresh on a fixed cycle, e.g. the clock runs its script once
+# every 10s. Other items respond to events they subscribe to, e.g. the
+# volume.sh script is only executed once an actual change in system audio
+# volume is registered. More info about the event system can be found here:
+# https://felixkratz.github.io/SketchyBar/config/events
+#### Battery
+sketchybar --add item battery right \
+           --set battery update_freq=120 \
+           --set battery script="$PLUGIN_DIR/battery.sh" \
+           --subscribe battery system_woke power_source_change \
+
+#### Date and time           
+sketchybar --add item datetime right \
+           --set datetime update_freq=10 \
+           --set datetime label.padding_left=4 \
+           --set datetime icon.padding_left=4 \
+           --set datetime padding_left=0 padding_right=0 \
+           --set datetime script="$PLUGIN_DIR/datetime.sh" \
+           
+#### Weather
+sketchybar --add item weather center \
+           --set weather update_freq=120 \
+           --set weather padding_left=0 \
+           --set weather script="$PLUGIN_DIR/weather.sh 'SãoPauloBR'" \
+
+#### Upload traffic
+sketchybar --add item network.up right \
+           --set network.up icon="󰜹" \
+           --set network.up icon.font="Hack Nerd Font:Bold:12.0" \
+           --set network.up label.font="Hack Nerd Font:Bold:12.0" \
+           --set network.up padding_left=1 padding_right=0 \
+           --set network.up update_freq=2 script="$PLUGIN_DIR/network.sh" \
+
+#### Download traffic
+sketchybar --add item network.down right \
+           --add item network.down right \
+           --set network.down icon="󰜯" \
+           --set network.down icon.font="Hack Nerd Font:Bold:12.0" \
+           --set network.down label.font="Hack Nerd Font:Bold:12.0" \
+           --set network.down padding_left=1 padding_right=0 \
+           --set network.down update_freq=2 script="$PLUGIN_DIR/network_traffic.sh" \
+
+#### CPU usage
+sketchybar -m --add item cpu right \
+           --set cpu icon=CPU \
+           --set cpu icon.font="$CPU_ICON_FONT" \
+           --set cpu label.font="$CPU_LABEL_FONT" \
+           --set cpu padding_left=1 padding_right=4 \
+           --set cpu update_freq=2 \
+           --set cpu script="$PLUGIN_DIR/cpu.sh" \
+
+#### RAM usage
+sketchybar -m --add item mem right \
+           --set mem icon=RAM \
+           --set mem icon.font="$MEM_ICON_FONT" \
+           --set mem label.font="$MEM_LABEL_FONT" \
+           --set mem padding_left=0 padding_right=0 \
+           --set mem update_freq=2 \
+           --set mem script="$PLUGIN_DIR/mem.sh" \
+
+##### Force all scripts to run the first time (never do this in a script) #####
+sketchybar --update
