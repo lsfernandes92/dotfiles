@@ -36,6 +36,13 @@ brew 'duti'
 brew 'cmatrix'
 brew 'openvpn'
 
+# .model managers
+brew 'ollama'
+
+# .ai tools
+brew tap zylon-ai/tap
+brew 'private-gpt'
+
 # .browser
 # cask 'firefox'
 # cask 'google-chrome'
@@ -77,7 +84,9 @@ cask 'notion'
 # .dev
 brew 'telnet'
 cask 'iterm2'
-cask 'docker'
+brew 'docker'
+brew 'docker-compose'
+brew 'colima'
 cask 'pritunl'
 brew 'felixkratz/formulae/sketchybar', trusted: true
 cask 'nikitabobko/tap/aerospace', trusted: true
